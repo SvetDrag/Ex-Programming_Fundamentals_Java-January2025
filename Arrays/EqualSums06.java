@@ -15,10 +15,13 @@ public class EqualSums06 {
 
         boolean found = false;
 
+
+
         for (int position = 0; position <= num.length - 1; position++) {
 
             if (num.length == 1) {
                 System.out.println("0");
+                found = true;
                 break;
             }
 
