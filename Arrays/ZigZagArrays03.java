@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Scanner;
 
-public class ZigZagArrays {
+public class ZigZagArrays03 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

@@ -13,7 +13,8 @@ public class TopIntegers05 {
                 .toArray();
 
         int biggestNum = 0;
-       int position = 1;
+        int position = 1;
+        int checker = 0;
 
         for (int i = 0; i <= num.length - 1; i++) {
             //int position = 1;
@@ -27,6 +28,13 @@ public class TopIntegers05 {
             }
 
             if (a > b) {
+                while (!(b == num.length)) {
+
+                    if (a > b) {
+                        b++;
+                        checker++;
+                    }
+                }
                 System.out.print(a + " ");
             }
 
