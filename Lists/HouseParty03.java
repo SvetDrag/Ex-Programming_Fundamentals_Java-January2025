@@ -11,28 +11,38 @@ public class HouseParty03 {
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
-        String command = scanner.nextLine();
+
         List<String> guests = new ArrayList<>();
 
 
-        for (int i = 1; i <= n ; i++) {
+        for (int i = 0; i < n ; i++) {
 
-            List<String> command2 = Arrays.stream(command.split(" "))
-                    .collect(Collectors.toList());
+            String command = scanner.nextLine();
+            String name = command.split(" ")[0];
 
-            if (command2.contains("is going!")) {
-                String personToAdd = command.split(" ")[0];
-                if (guests.contains(personToAdd)){
-                    System.out.printf("%s is already in the list!", personToAdd);
+            if (command.contains("not")) {
+
+                if (guests.contains(name)){
+                    guests.remove(name);
                 }
                 else {
-                    guests.add(personToAdd);
-                    System.out.println(guests);
+                    System.out.printf("%s is not in the list!%n", name);
                 }
 
-
+            }
+            else {
+                if (guests.contains(name)){
+                    System.out.printf("%s is already in the list!%n", name);
+                }
+                else {
+                    guests.add(name);
+                }
             }
 
+        }
+
+        for(String m : guests){
+            System.out.println(m);
         }
     }
 }
