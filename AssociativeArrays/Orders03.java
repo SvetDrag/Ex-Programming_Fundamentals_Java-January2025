@@ -17,7 +17,7 @@ public class Orders03 {
             double quantity = Double.parseDouble(input.split(" ")[2]);
 
 
-            
+
 
 
 
