@@ -21,7 +21,7 @@ public class Orders03 {
 
             productPrice.put(name, price);
 
-            productQuantity.put(name, productQuantity.getOrDefault(name, 0.0) + quantity); 
+            productQuantity.put(name, productQuantity.getOrDefault(name, 0.0) + quantity);
 
             input = scanner.nextLine();
         }
