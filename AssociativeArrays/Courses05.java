@@ -3,7 +3,7 @@ package AssociativeArrays;
 
 import java.util.*;
 
-public class Courses {
+public class Courses05 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
