@@ -22,6 +22,9 @@ public class Courses05 {
             studentsList.get(courseName).add(studentName);
 
 
+            input = scanner.nextLine();
+
+
         }
 
 
