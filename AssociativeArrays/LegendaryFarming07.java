@@ -24,9 +24,10 @@ public class LegendaryFarming07 {
 
         int poss1 = 0;
         int poss2 = 1;
-        String material = input.get(poss2);
+        String material = " ";
 
-        for (int i = 0; i < input.size(); i++) {
+        for (int i = 0; i < input.size()-1; i++) {
+            material = input.get(poss2);
 
             switch (material){
 
@@ -84,8 +85,8 @@ public class LegendaryFarming07 {
             }
 
 
-            poss1 ++;
-            poss2++;
+            poss1 += 2;
+            poss2 += 2;
 
         }
 
