@@ -21,7 +21,6 @@ public class Courses05 {
             studentsList.putIfAbsent(courseName, new ArrayList<>());
             studentsList.get(courseName).add(studentName);
 
-            input = scanner.nextLine();
 
         }
 
