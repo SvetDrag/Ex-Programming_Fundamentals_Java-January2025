@@ -38,7 +38,7 @@ public class Furniture01 {
             input = scanner.nextLine();
         }
 
-        System.out.printf("%.2f", totalPrice);
+        System.out.printf("Total money spend: %.2f", totalPrice);
 
 
     }
