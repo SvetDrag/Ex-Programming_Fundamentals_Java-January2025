@@ -11,7 +11,7 @@ public class SoftUniBarIncome02 {
         Scanner scanner = new Scanner (System.in);
 
         String input = scanner.nextLine();
-        String regex = "%(?<name>[A-Z]{1}[a-z]+)%\\w*<(?<product>\\w+)>\\w*\\|(?<count>\\d+)\\|[A-z]*(?<price>\\d+.?\\d*)\\$";
+        String regex = "%(?<name>[A-Z][a-z]+)%[^|$%.]*<(?<product>\\w+)>[^|$%.]*\\|(?<count>\\d+)\\|[A-z]*(?<price>\\d+.?\\d*)\\$";
         Pattern pattern = Pattern.compile(regex);
         double totalPrice = 0.0;
         double totalIncome = 0.0;
