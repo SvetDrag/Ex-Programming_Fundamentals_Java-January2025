@@ -11,9 +11,9 @@ public class Furniture01 {
         Scanner scanner = new Scanner (System.in);
 
         String input = scanner.nextLine();
-        String regex = ">>(?<name>\\w+)<<(?<price>\\d+.?\\d+)!(?<quantity>\\d+)\\b";
+        String regex = ">>(?<name>\\w+)<<(?<price>\\d+.?\\d*)!(?<quantity>\\d+)\\b";
         Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(input);
+        //Matcher matcher = pattern.matcher(input);
         System.out.println("Bought furniture:");
         double totalPrice = 0.0;
 
@@ -22,14 +22,14 @@ public class Furniture01 {
 
 
         while (!input.equals("Purchase")){
-
+            Matcher matcher = pattern.matcher(input);
             if (matcher.find()){
                 //String[] text = matcher.group().split("[<<!]");
                 String furniture = matcher.group("name");
                 double price = Double.parseDouble(matcher.group("price"));
                 int quantity = Integer.parseInt(matcher.group("quantity"));
 
-                totalPrice = price * quantity;
+                totalPrice += price * quantity;
 
                 System.out.println(furniture);
 
